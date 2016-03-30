@@ -19,6 +19,7 @@ public class POOTema5 {
         ventana1 ventana = new ventana1();
         
         ejemploSwing.mostrar();
+        ejemploSwingEvento.mostrar();
     }
     
 }
