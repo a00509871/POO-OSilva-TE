@@ -18,7 +18,7 @@ public class POOTema5 {
         // TODO code application logic here
         ventana1 ventana = new ventana1();
         
-        
+        ejemploSwing.mostrar();
     }
     
 }
