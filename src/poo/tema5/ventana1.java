@@ -12,12 +12,13 @@ import java.awt.*;
  */
 public class ventana1 extends Frame  {
     //Atributos: 3 botones.
-    private Button b1, b2, b3;
+    private final Button b1, b2, b3;
     
     //Constructor
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public ventana1 (){
         super("Esta es una ventana de prueba");
-        setLayout(new FlowLayout(FlowLayout.RIGHT));
+        setLayout(new FlowLayout());
         
         b1 = new Button("Soy el botón 1");
         add (b1);
