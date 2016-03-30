@@ -29,7 +29,7 @@ public class ventana1 extends Frame  {
         b3 = new Button ("Soy el botón 3");
         add (b3);
         
-        setSize(500,400);
+        setSize(700,400);
         setVisible(true);
     
     }
