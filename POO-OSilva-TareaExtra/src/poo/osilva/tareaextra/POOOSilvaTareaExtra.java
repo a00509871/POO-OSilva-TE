@@ -19,13 +19,15 @@ public class POOOSilvaTareaExtra {
     public static void main(String[] args) {
 
         String nombre;
-        Double peso;         
+        Double peso;
+        Double estatura;
         boolean numeroCorrecto;
-
-        nombre = JOptionPane.showInputDialog(null, "¿Cómo te llamas?", "Nombre", -1);        
         
-        do {
-            peso = -1.0;
+        
+        nombre = JOptionPane.showInputDialog(null, "¿Cómo te llamas?", "Nombre", -1);
+        
+        peso = -1.0;        
+        do {            
             numeroCorrecto = true;
             
             try {                
@@ -40,10 +42,29 @@ public class POOOSilvaTareaExtra {
                 numeroCorrecto = false;
             }
                                     
-        } while(!numeroCorrecto);        
+        } while(!numeroCorrecto);
         
-        
+        estatura = -1.0;
+        do {
+            
+            numeroCorrecto = true;
+            
+            try {                
+                estatura = Double.parseDouble(JOptionPane.showInputDialog(null, "¿Cuál es tu estatura?", "Estatura", -1));
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "Debes ingresar un número", "Alerta", 0);                
+                numeroCorrecto = false;
+            }
+            
+            if(numeroCorrecto && estatura<=0){                
+                JOptionPane.showMessageDialog(null, "No se puede tener una altura menor o igual a 0", "Alerta", 0);
+                numeroCorrecto = false;
+            }
+                                    
+        } while(!numeroCorrecto);
     
+        
+        
     }
 
 }

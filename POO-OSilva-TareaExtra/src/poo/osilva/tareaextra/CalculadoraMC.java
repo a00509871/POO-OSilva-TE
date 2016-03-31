@@ -24,7 +24,14 @@ public class CalculadoraMC {
     
     public static String mensajeSalud(){
         Double aux = calcularIMC();
-        String mensaje = nombre + " tu IMC indica: ";
+        String mensaje;
+        
+        if (nombre == null || nombre.length() == 0){
+            mensaje = "Tu IMC indica: ";
+        } else {
+            mensaje = nombre + " tu IMC indica: ";
+        }        
+        
         if (aux < 18){
             mensaje += "Peso bajo";
         } else if (aux < 25){
