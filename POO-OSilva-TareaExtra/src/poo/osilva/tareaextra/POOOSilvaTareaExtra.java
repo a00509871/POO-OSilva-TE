@@ -31,12 +31,11 @@ public class POOOSilvaTareaExtra {
             try {                
                 peso = Double.parseDouble(JOptionPane.showInputDialog(null, "¿Cuál es tu peso?", "Peso", -1));
             } catch (NumberFormatException nfe) {
-                JOptionPane.showMessageDialog(null, "Debes ingresar un número", "Alerta", 0);
-                peso = -1.0;
+                JOptionPane.showMessageDialog(null, "Debes ingresar un número", "Alerta", 0);                
                 numeroCorrecto = false;
             }
             
-            if(peso<=0){                
+            if(numeroCorrecto && peso<=0){                
                 JOptionPane.showMessageDialog(null, "No se puede tener un peso menor o igual a 0", "Alerta", 0);
                 numeroCorrecto = false;
             }
