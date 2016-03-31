@@ -24,9 +24,14 @@ public class POOOSilvaTareaExtra {
         String mensajeFinal;
         boolean numeroCorrecto;
         
+        // Mensaje de diálogo donde pide le nombre. No hay problema si no se 
+        // escribe nada o si escribe números y símbolos
         
         nombre = JOptionPane.showInputDialog(null, "¿Cómo te llamas?", "Nombre", -1);
         
+        /**
+         * Código que pedirá al usuario su peso, y que el peso que ingrese sea válido
+         */
         peso = -1.0;        
         do {            
             numeroCorrecto = true;
@@ -45,6 +50,9 @@ public class POOOSilvaTareaExtra {
                                     
         } while(!numeroCorrecto);
         
+        /**
+         * Código que pedirá al usuario su estatura, y que la estatura que ingrese sea un número válido
+         */
         estatura = -1.0;
         do {
             
@@ -64,8 +72,11 @@ public class POOOSilvaTareaExtra {
                                     
         } while(!numeroCorrecto);
     
-        DecimalFormat df = new DecimalFormat("#.00");
-                
+        /**
+         * Adelante se encuentra el código para mostrar un mensaje que indica al usuario su IMC.
+         */
+        
+        DecimalFormat df = new DecimalFormat("#.00");                
         CalculadoraMC.nombre = nombre;
         CalculadoraMC.estatura = estatura;
         CalculadoraMC.peso = peso;
