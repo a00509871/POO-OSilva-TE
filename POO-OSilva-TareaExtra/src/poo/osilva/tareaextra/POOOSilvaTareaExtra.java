@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package poo.osilva.tareaextra;
-
+import java.text.DecimalFormat;
 import javax.swing.*;
 
 /**
@@ -21,6 +21,7 @@ public class POOOSilvaTareaExtra {
         String nombre;
         Double peso;
         Double estatura;
+        String mensajeFinal;
         boolean numeroCorrecto;
         
         
@@ -63,7 +64,13 @@ public class POOOSilvaTareaExtra {
                                     
         } while(!numeroCorrecto);
     
+        DecimalFormat df = new DecimalFormat("#.00");
+                
+        CalculadoraMC.nombre = nombre;
+        CalculadoraMC.estatura = estatura;
+        CalculadoraMC.peso = peso;
         
+        JOptionPane.showMessageDialog(null, "IMC: " + df.format(CalculadoraMC.calcularIMC()) + "\n" + CalculadoraMC.mensajeSalud(), "IMC", -1);
         
     }
 
